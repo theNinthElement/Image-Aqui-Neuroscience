@@ -94,7 +94,7 @@ def get_mu_sigma(x, labels):
     for i in range(3):
         clusterpoints = x[labels == i]
         mu[i] = np.mean(clusterpoints)
-        sigma[i] = np.mean((clusterpoints - mu[i])**2)
+        sigma[i] = np.sqrt(np.mean((clusterpoints - mu[i])**2))
     return mu, sigma
 
 old_labels = icm(non_zero_pixels, kmeans, mask, 0.5, mu, sigma)
