@@ -34,7 +34,7 @@ def init_kmeans(x, k):
     nn = kmeans.predict(x_)
     sigma = np.empty(k)
     for i in range(k):
-        sigma[i] = np.mean((x[nn == i] - mu_[i])**2)
+        sigma[i] = np.sqrt(np.mean((x[nn == i] - mu_[i])**2))
     return mu, sigma, nn
 
 mu, sigma, kmeans = init_kmeans(non_zero_pixels, 3)
