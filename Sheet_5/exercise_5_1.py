@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jan 12 22:58:16 2021
+@author: Paul
+"""
+
 import numpy as np
 import scipy.stats
 import pandas as pd
