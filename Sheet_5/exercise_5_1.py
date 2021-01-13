@@ -13,7 +13,7 @@ study = pd.read_excel('bipolar.xls')
 study = study.to_numpy()
 
 medicine = study[np.equal(np.rint(study[:,3]).astype(int),1)]
-placebo = study[np.equal(study[:,3],0)]
+placebo = study[np.equal(np.rint(study[:,3]).astype(int),0)]
 delta_medicine = medicine[:,2]-medicine[:,1]
 delta_placebo = placebo[:,2]-placebo[:,1]
 
